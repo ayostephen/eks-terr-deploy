@@ -82,29 +82,29 @@ variable "sso_admin_group_id" {
 variable "ami_id" {
   description = "The AMI ID for the instances"
   type        = string
-  default     = "ami-03c983f9003cb9cd1"
+  default     = "ami-04dd23e62ed049936"
 }
 
 variable "instance_type" {
   description = "The instance type for the instances"
   type        = string
-  default     = "t2.medium"
+  default     = "t3.medium"
 }
 
 
 variable "key_name" {
   description = "The key name for the instances"
   type        = string
-  default     = "DevOps_Train2024"
+  default     = "team-key"
 }
 
 ###########################
 #Sonaqube instance
 ##########################
-variable "security_group_id" {
-  type    = string
-  default = "sg-062f6f9197dae636e"
-}
+# variable "security_group_id" {
+#   type    = string
+#   default = "sg-062f6f9197dae636e"
+# }
 
 # variable "subnet_id" {
 #   type    = string
@@ -119,42 +119,42 @@ variable "security_group_id" {
 ##################
 #sonarqube db 
 ###################
-variable "subnet_id" {
-  description = "The subnet ID where the instance will be deployed"
-  type        = string
-  default     = "subnet-0ea3d234fba84eef9"
-}
+# variable "subnet_id" {
+#   description = "The subnet ID where the instance will be deployed"
+#   type        = string
+#   default     = "subnet-0ea3d234fba84eef9"
+# }
 
-variable "db_name" {
-  description = "The name of the PostgreSQL database"
-  type        = string
-  default     = "sonarqube"
-}
+# variable "db_name" {
+#   description = "The name of the PostgreSQL database"
+#   type        = string
+#   default     = "sonarqube"
+# }
 
-variable "db_username" {
-  description = "The username for the PostgreSQL database"
-  type        = string
-  default     = "sonar"
-}
+# variable "db_username" {
+#   description = "The username for the PostgreSQL database"
+#   type        = string
+#   default     = "sonar"
+# }
 
-variable "db_password" {
-  description = "The password for the PostgreSQL database"
-  type        = string
-  sensitive   = true
-  default     = "Team@123"
-}
+# variable "db_password" {
+#   description = "The password for the PostgreSQL database"
+#   type        = string
+#   sensitive   = true
+#   default     = "Team@123"
+# }
 
-variable "db_security_group_id" {
-  description = "The security group ID for the PostgreSQL database"
-  type        = list(string)
-  default     = ["sg-0e592ee1b326b5c42"]
-}
+# variable "db_security_group_id" {
+#   description = "The security group ID for the PostgreSQL database"
+#   type        = list(string)
+#   default     = ["sg-0e592ee1b326b5c42"]
+# }
 
-variable "db_subnet_group" {
-  description = "The subnet group for the PostgreSQL database"
-  type        = string
-  default     = "default-vpc-0363891b6294839c8"
-}
+# variable "db_subnet_group" {
+#   description = "The subnet group for the PostgreSQL database"
+#   type        = string
+#   default     = "default-vpc-0363891b6294839c8"
+# }
 
 # variable "s3_bucket" {
 #   description = "The name of the S3 bucket for storing Terraform state"
